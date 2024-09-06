@@ -1,5 +1,5 @@
-<p align='right'>web: obshake.github.io </p>
-<p align='right'>email:admin@abhishekpaul.me</p>
+<p align='right'><b>web:</b> obshake.github.io </p>
+<p align='right'><b>email:</b> admin@abhishekpaul.me</p>
 
 ## Projects
 ### sql Projects
