@@ -1,4 +1,4 @@
-# obshake.github.io 
+<p align='right'>web: obshake.github.io </p>
 <p align='right'>email:admin@abhishekpaul.me</p>
 
 ## Projects
