@@ -8,38 +8,29 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-    <!-- Header Section -->
-    <header class="header">
-        <div class="profile-container">
-            <img src="img/profile_picture.jpg" alt="Abhishek Kumar Paul" class="profile-picture">
-            <h1>Abhishek Kumar Paul</h1>
-            <p>Data Analyst | SQL | Power BI | Python</p>
-            <div class="links">
-                <a href="https://www.linkedin.com/in/abhishek-kumar-paul" target="_blank">LinkedIn</a>
-                <a href="https://github.com/username" target="_blank">GitHub</a>
-            </div>
-        </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-        </ul>
-    </nav>
-
-    <!-- About Me Section -->
-    <section id="about" class="section">
+    <section id="about" class="container">
         <h2>About Me</h2>
-        <p>Hello! I’m Abhishek Kumar Paul, a BCA Data Analytics student...</p>
+        <div class="about-content">
+            <img src="https://github.com/your-username.png" alt="Abhishek Kumar Paul" class="profile-picture">
+            <div class="about-text">
+                <p>Hello! I’m Abhishek Kumar Paul, a BCA Data Analytics student with a deep passion for data analysis and visualization. I’ve transitioned from a career in animation to data analytics, bringing a unique perspective of creativity and technical skills. With proficiency in SQL, Power BI, and Python, I thrive on turning data into actionable insights. I’m constantly learning new tools and technologies to enhance my data analysis skills and deliver impactful results. </p>
+                <p>In my free time, I enjoy exploring different datasets, improving my analytical skills, and keeping up with the latest trends in data science. Let’s connect and grow together!</p>
+            </div>
+        </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section">
+    <section id="skills" class="container">
         <h2>Skills</h2>
         <div class="skills-grid">
             <div class="skill-card">
@@ -50,51 +41,100 @@
                 <img src="img/powerbi_logo.png" alt="Power BI">
                 <p>Power BI</p>
             </div>
-            <!-- Add more skills here -->
+            <div class="skill-card">
+                <img src="img/excel_logo.png" alt="Excel">
+                <p>Excel</p>
+            </div>
+            <div class="skill-card">
+                <img src="img/python_logo.png" alt="Python">
+                <p>Python</p>
+            </div>
         </div>
     </section>
 
-    <!-- Portfolio Section with Tabs -->
-    <section id="portfolio" class="section">
+    <section id="portfolio" class="container">
         <h2>Portfolio</h2>
         <div class="tabs">
             <button class="tablinks" onclick="openTab(event, 'SQL')">SQL</button>
             <button class="tablinks" onclick="openTab(event, 'PowerBI')">Power BI</button>
-            <!-- Add more tabs here -->
+            <button class="tablinks" onclick="openTab(event, 'Excel')">Excel</button>
+            <button class="tablinks" onclick="openTab(event, 'Python')">Python</button>
         </div>
 
         <div id="SQL" class="tabcontent">
-            <div class="project-card">
-                <h3>SQL Project</h3>
-                <p>SQL project description.</p>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="img/project1.jpg" alt="Telangana Growth Analysis">
+                    <h3>Telangana Growth Analysis</h3>
+                    <a href="https://github.com/username/telangana-growth-analysis">View on GitHub</a>
+                </div>
+                <div class="project-card">
+                    <img src="img/project2.jpg" alt="Library Management System">
+                    <h3>Library Management System</h3>
+                    <a href="https://github.com/username/library-management-system">View on GitHub</a>
+                </div>
             </div>
         </div>
 
         <div id="PowerBI" class="tabcontent">
-            <div class="project-card">
-                <h3>Power BI Project</h3>
-                <p>Power BI project description.</p>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="img/project3.jpg" alt="Sales Dashboard">
+                    <h3>Sales Dashboard</h3>
+                    <a href="https://github.com/username/powerbi-sales-dashboard">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="Excel" class="tabcontent">
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="img/project4.jpg" alt="Financial Analysis">
+                    <h3>Financial Analysis</h3>
+                    <a href="https://github.com/username/excel-financial-analysis">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="Python" class="tabcontent">
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="img/project5.jpg" alt="Data Scraping">
+                    <h3>Data Scraping</h3>
+                    <a href="https://github.com/username/python-data-scraping">View on GitHub</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Certifications Section -->
-    <section id="certifications" class="section">
+    <section id="certifications" class="container">
         <h2>Certifications</h2>
-        <ul>
-            <li>Credit Card Fraud Detection</li>
-            <li>Power BI Dashboard Design</li>
-        </ul>
+        <div class="cert-grid">
+            <div class="cert-card">
+                <img src="img/cert1.jpg" alt="Certification 1">
+                <a href="https://certification-issuer1.com">View Certificate</a>
+            </div>
+            <div class="cert-card">
+                <img src="img/cert2.jpg" alt="Certification 2">
+                <a href="https://certification-issuer2.com">View Certificate</a>
+            </div>
+            <div class="cert-card">
+                <img src="img/cert3.jpg" alt="Certification 3">
+                <a href="https://certification-issuer3.com">View Certificate</a>
+            </div>
+            <div class="cert-card">
+                <img src="img/cert4.jpg" alt="Certification 4">
+                <a href="https://certification-issuer4.com">View Certificate</a>
+            </div>
+        </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>Connect with me on <a href="https://www.linkedin.com/in/abhishek-kumar-paul">LinkedIn</a></p>
     </footer>
 
-    <!-- JavaScript for Smooth Scrolling and Tabs -->
     <script>
-        // Smooth scrolling for navigation links
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -104,7 +144,6 @@
             });
         });
 
-        // Tab functionality for portfolio section
         function openTab(evt, tabName) {
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tabcontent");
@@ -122,6 +161,5 @@
         // Initialize the first tab
         document.querySelector('.tablinks').click();
     </script>
-
 </body>
 </html>
