@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek Kumar Paul's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about" class="container">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <img src="img/profile_picture.jpg" alt="Abhishek Kumar Paul" class="profile-picture">
+            <div class="about-text">
+                <p>Hello! I’m Abhishek Kumar Paul, a BCA Data Analytics student with a deep passion for data analysis and visualization...</p>
+                <p>In my free time, I enjoy exploring different datasets, improving my analytical skills, and keeping up with the latest trends in data science. Let’s connect and grow together!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="container">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <img src="img/sql_logo.png" alt="SQL">
+                <p>SQL</p>
+            </div>
+            <div class="skill-card">
+                <img src="img/powerbi_logo.png" alt="Power BI">
+                <p>Power BI</p>
+            </div>
+            <div class="skill-card">
+                <img src="img/excel_logo.png" alt="Excel">
+                <p>Excel</p>
+            </div>
+            <div class="skill-card">
+                <img src="img/python_logo.png" alt="Python">
+                <p>Python</p>
+            </div>
+            <div class="skill-card">
+                <img src="img/tableau_logo.png" alt="Tableau">
+                <p>Tableau</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section with Tabs -->
+    <section id="portfolio" class="container">
+        <h2>Portfolio</h2>
+        <div class="tabs">
+            <button class="tablinks" onclick="openTab(event, 'SQL')">SQL</button>
+            <button class="tablinks" onclick="openTab(event, 'PowerBI')">Power BI</button>
+            <button class="tablinks" onclick="openTab(event, 'Excel')">Excel</button>
+            <button class="tablinks" onclick="openTab(event, 'Python')">Python</button>
+        </div>
+
+        <!-- SQL Projects -->
+        <div id="SQL" class="tabcontent">
+            <div class="project-card">
+                <h3>Telangana Growth Analysis</h3>
+                <p>Analyzed growth across different sectors in Telangana using SQL.</p>
+                <a href="https://github.com/username/telangana-growth-analysis">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <h3>Library Management System</h3>
+                <p>SQL project for managing library systems with various data management queries.</p>
+                <a href="https://github.com/username/library-management-system">View on GitHub</a>
+            </div>
+        </div>
+
+        <!-- Power BI Projects -->
+        <div id="PowerBI" class="tabcontent">
+            <div class="project-card">
+                <h3>Sales Dashboard</h3>
+                <p>Interactive sales dashboard created with Power BI for tracking KPIs.</p>
+                <a href="https://github.com/username/powerbi-sales-dashboard">View on GitHub</a>
+            </div>
+        </div>
+
+        <!-- Excel Projects -->
+        <div id="Excel" class="tabcontent">
+            <div class="project-card">
+                <h3>Financial Analysis</h3>
+                <p>Excel project using advanced techniques for financial analysis and projections.</p>
+                <a href="https://github.com/username/excel-financial-analysis">View on GitHub</a>
+            </div>
+        </div>
+
+        <!-- Python Projects -->
+        <div id="Python" class="tabcontent">
+            <div class="project-card">
+                <h3>Data Scraping and Cleaning</h3>
+                <p>Python project for web scraping and cleaning data for analysis.</p>
+                <a href="https://github.com/username/python-data-scraping">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="container">
+        <h2>Certifications</h2>
+        <ul>
+            <li>Credit Card Fraud Detection</li>
+            <li>Power BI Dashboard Design</li>
+        </ul>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Connect with me on <a href="https://www.linkedin.com/in/abhishek-kumar-paul">LinkedIn</a></p>
+    </footer>
+
+    <!-- JavaScript for Smooth Scrolling and Tabs -->
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Tab functionality for the portfolio section
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Initialize the first tab to be open
+        document.querySelector('.tablinks').click();
+    </script>
+</body>
+</html>
