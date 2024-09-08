@@ -4,49 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abhishek Kumar Paul's Portfolio</title>
-    <link rel="stylesheet" href="https://github.com/obshake/obshake.github.io/blob/main/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-        <h1>Abhishek Kumar Paul</h1>
-        <p>Aspiring Data Analyst | SQL Enthusiast</p>
+        <div class="container">
+            <h1>Abhishek Kumar Paul</h1>
+            <p>Aspiring Data Analyst | SQL Enthusiast</p>
+        </div>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>BCA Data Analytics student with a passion for analyzing complex data. Former animator with a keen eye for detail and design.</p>
+    <section id="about" class="container">
+        <div class="card">
+            <h2>About Me</h2>
+            <p>BCA Data Analytics student with a passion for analyzing complex data. Former animator with a keen eye for detail and design. I love solving problems using data.</p>
+        </div>
     </section>
 
-    <section id="skills">
+    <section id="skills" class="container">
         <h2>Skills</h2>
-        <ul>
-            <li>SQL</li>
-            <li>Data Analysis</li>
-            <li>Power BI</li>
-            <li>Python</li>
-            <li>Tableau</li>
-        </ul>
+        <div class="skills-grid">
+            <div class="skill-card">SQL</div>
+            <div class="skill-card">Data Analysis</div>
+            <div class="skill-card">Power BI</div>
+            <div class="skill-card">Python</div>
+            <div class="skill-card">Excel</div>
+            <div class="skill-card">Tableau</div>
+        </div>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="container">
         <h2>Projects</h2>
-        <ul>
-            <li><a href="projects/telangana-growth-analysis.html">Telangana Growth Analysis (SQL)</a></li>
-            <li><a href="projects/library-management-system.html">Library Management System (SQL)</a></li>
-            <li><a href="projects/netflix-analysis.html">Netflix Data Analysis (SQL)</a></li>
-        </ul>
+        <div class="tabs">
+            <button class="tablinks" onclick="openTab(event, 'SQL')">SQL</button>
+            <button class="tablinks" onclick="openTab(event, 'PowerBI')">Power BI</button>
+            <button class="tablinks" onclick="openTab(event, 'Excel')">Excel</button>
+            <button class="tablinks" onclick="openTab(event, 'Python')">Python</button>
+        </div>
+
+        <div id="SQL" class="tabcontent">
+            <div class="project-card">
+                <h3>Telangana Growth Analysis (SQL)</h3>
+                <p>In-depth SQL analysis of various growth sectors in Telangana.</p>
+                <a href="projects/telangana-growth-analysis.html">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Library Management System (SQL)</h3>
+                <p>SQL queries for managing a library system with data analysis features.</p>
+                <a href="projects/library-management-system.html">View Project</a>
+            </div>
+        </div>
+
+        <div id="PowerBI" class="tabcontent">
+            <div class="project-card">
+                <h3>Sales Dashboard (Power BI)</h3>
+                <p>Interactive sales dashboard built using Power BI for tracking KPIs.</p>
+                <a href="projects/powerbi-sales-dashboard.html">View Project</a>
+            </div>
+        </div>
+
+        <div id="Excel" class="tabcontent">
+            <div class="project-card">
+                <h3>Financial Analysis (Excel)</h3>
+                <p>Advanced Excel techniques to perform financial analysis and projections.</p>
+                <a href="projects/excel-financial-analysis.html">View Project</a>
+            </div>
+        </div>
+
+        <div id="Python" class="tabcontent">
+            <div class="project-card">
+                <h3>Data Scraping and Cleaning (Python)</h3>
+                <p>Python project for web scraping and data cleaning for analysis.</p>
+                <a href="projects/python-data-scraping.html">View Project</a>
+            </div>
+        </div>
     </section>
 
-    <section id="certifications">
+    <section id="certifications" class="container">
         <h2>Certifications</h2>
-        <ul>
-            <li>Credit Card Fraud Detection</li>
-            <li>Power BI Dashboard Design</li>
-        </ul>
+        <div class="certification-card">
+            <p>Credit Card Fraud Detection</p>
+        </div>
+        <div class="certification-card">
+            <p>Power BI Dashboard Design</p>
+        </div>
     </section>
 
     <footer>
         <p>Connect with me on <a href="https://www.linkedin.com/in/abhishek-kumar-paul">LinkedIn</a></p>
     </footer>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        document.getElementById("SQL").style.display = "block";
+    </script>
 </body>
 </html>
