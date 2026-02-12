@@ -1,47 +1,194 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+  background-color: #ffffff;
+  padding: 60px 20px;
+  color: #1a1a1a;
+  line-height: 1.6;
 }
 
-header {
-    background-color: #fff;
-    color: #333;
-    padding: 1em;
-    text-align: center;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-section {
-    margin: 4em auto;
-    width: 80%;
+/* --- Main Header Styles --- */
+.main-header {
+  text-align: center;
+  padding: 40px 20px;
+  margin-bottom: 20px;
 }
 
-h2 {
-    border-bottom: 2px solid #333;
-    padding-bottom: 0.5em;
+.user-name {
+  font-size: 2.2rem;
+  font-weight: 800; /* Extra bold as per the image */
+  color: #1a1a1a;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
+.contact-info {
+  font-size: 1.1rem;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Ensures it looks good on mobile */
+  gap: 8px;
 }
 
-ul li {
-    background-color: white;
-    padding: 1em;
-    margin: 0.5em 0;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+.contact-info a {
+  color: #333;
+  text-decoration: underline; /* Matches the LinkedIn/Github look */
+  transition: color 0.2s ease;
 }
 
-a {
-    text-decoration: none;
-    color: #007BFF;
+.contact-info a:hover {
+  color: #666; /* Light black on hover */
 }
 
-footer {
-    text-align: center;
-    padding: 1em;
-    background-color: #fff;
-    color: #333;
+.separator {
+  color: #333;
+  font-weight: 300;
+}
+
+/* Adjusting the Projects title spacing now that we have a header */
+.main-title {
+  margin-top: 40px;
+  text-align: left; /* Keeps your Projects title aligned to the left */
+}
+
+/* Section Spacing */
+.project-section {
+  margin-bottom: 80px; /* Space between different categories */
+}
+
+/* Titles */
+.main-title {
+  font-size: 2.8rem;
+  font-weight: 500;
+  margin-bottom: 50px;
+  letter-spacing: -1px;
+}
+
+.section-header {
+  margin-bottom: 35px;
+}
+
+.sub-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.underline {
+  width: 45px;
+  height: 3px;
+  background-color: #333;
+  margin-top: 10px;
+}
+
+/* Grid Layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 40px 30px;
+}
+
+/* Project Cards */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.image-placeholder {
+  background-color: #ffffff;
+  border: 1px solid #ececec;
+  border-radius: 8px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .image-placeholder img {
+  transform: scale(1.05);
+}
+
+.icon {
+  font-size: 3.5rem;
+  filter: grayscale(100%);
+  opacity: 0.25;
+}
+
+.project-name {
+  font-size: 1.15rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #222;
+}
+
+.project-link {
+  color: #000000;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.project-link:hover {
+  color: #555555;
+}
+
+/* Tags/Pills */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  background-color: #fcfcfc;
+  border: 1px solid #e5e5e5;
+  color: #777;
+  padding: 5px 16px;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.tag:hover {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .main-title {
+    font-size: 2rem;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }
